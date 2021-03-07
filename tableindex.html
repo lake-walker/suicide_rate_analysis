@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <style>
+        .jumbotron {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <a href="mainpage.html">Home</a>
+    <a href="tableindex.html">Data</a>
+    <a href="index1.html">Bubble Chart</a>
+    <a href="apexchart.html">Bar Chart</a>
+    <a href="index.html">Map</a>
+    <a href="conclusion.html">Conclusion</a>
+  </div>
+        <div class='container'>
+          <div class='row'>
+              <div class='col-md-12'>
+                  <div class='col-md-12'>
+                      <h4>Data</h4>
+                      <hr>
+                      <p>The following table includes all of the data used for plotting during this project.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="jumbotron">
+              <h1>Country Data</h1>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <table class="sortable">
+                      <thead>
+                          <tr><th>Country </th> <th class='sorttable_numeric'>GDP per Capita  |</th> <th class='sorttable_numeric'>Suicides per 100k  |</th> <th class='sorttable_numeric'>Happiness Index Score  |</th> <th>Human Development Index  |</th> <th class='sorttable_numeric'>Happiness Rank  |</th> <th class='sorttable_numeric'>HDI Rank  |</th></tr>
+                      </thead>
+                      <tbody></tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="static/js/sortable.js"></script>
+    <script src="static/js/table.js"></script>
+</body>
+
+</html>
