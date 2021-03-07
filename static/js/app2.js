@@ -21,7 +21,7 @@ var gdpMarkers = [];
 var hdiMarkers = [];
 
 d3.json('data/countries.geojson').then(function (data) {
-d3.csv('data/country_data.csv').then(function (csv) {
+d3.csv('data/new_country_data.csv').then(function (csv) {
   var world = data.features;
   console.log(world[39].properties.ADMIN);
   console.log(csv);

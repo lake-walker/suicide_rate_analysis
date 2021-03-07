@@ -1,11 +1,11 @@
 // Bubble Chart
 var svgWidth = 1500;
-var svgHeight = 650;
+var svgHeight = 750;
 
 var margin = {
   top: 20,
   right: 40,
-  bottom: 80,
+  bottom: 150,
   left: 100
 };
 
@@ -73,6 +73,15 @@ function updateToolTip(chosenXAxis, circlesGroup) {
   else if (chosenXAxis === "gdp_percapita_2015") {
     label = "GDP per Capita";
   }
+  else if (chosenXAxis === "alcohol_consumption_percapita") {
+    label = "Alcohol Consumption per Capita";
+  }
+  else if (chosenXAxis === "health_spending_percapita_2015") {
+    label = "Health Spending per Capita";
+  }
+  else if (chosenXAxis === "private_debt_2015") {
+    label = "Private Debt";
+  }
   else {
     label = 'Human Development Index';
   }
@@ -130,7 +139,7 @@ var keys = ['Australia and New Zealand','Central and Eastern Europe','Eastern As
 //   .range(d3.schemeset2);
 
 // Retrieve data from the CSV file and execute everything below
-d3.csv("data/country_data.csv").then(function(countryData, err) {
+d3.csv("data/new_country_data.csv").then(function(countryData, err) {
   if (err) throw err;
   console.log(countryData);
 
@@ -140,6 +149,9 @@ d3.csv("data/country_data.csv").then(function(countryData, err) {
     data.sui_per_100k_2015 = +data.sui_per_100k_2015;
     data.gdp_percapita_2015 = +data.gdp_percapita_2015;
     data.human_development_index = +data.human_development_index;
+    data.private_debt_2015 = +data.private_debt_2015;
+    data.health_spending_percapita_2015 = +data.health_spending_percapita_2015;
+    data.alcohol_consumption_percapita = +data.alcohol_consumption_percapita;
   });
 
   // xLinearScale function above csv import
@@ -202,6 +214,27 @@ d3.csv("data/country_data.csv").then(function(countryData, err) {
       .classed("inactive", true)
       .text("Human Development Index");
 
+  var debtLabel = labelsGroup.append("text")
+      .attr("x", 0)
+      .attr("y", 80)
+      .attr("value", "private_debt_2015") // value to grab for event listener
+      .classed("inactive", true)
+      .text("Private Debt");
+
+  var healthLabel = labelsGroup.append("text")
+      .attr("x", 0)
+      .attr("y", 100)
+      .attr("value", "health_spending_percapita_2015") // value to grab for event listener
+      .classed("inactive", true)
+      .text("Health Spending per Capita");
+
+  var alcoholLabel = labelsGroup.append("text")
+      .attr("x", 0)
+      .attr("y", 120)
+      .attr("value", "alcohol_consumption_percapita") // value to grab for event listener
+      .classed("inactive", true)
+      .text("Alcohol Consumption per Capita");
+
   // append y axis
   chartGroup.append("text")
     .attr("transform", "rotate(-90)")
@@ -263,6 +296,15 @@ d3.csv("data/country_data.csv").then(function(countryData, err) {
             hdiLabel
                 .classed("active", false)
                 .classed("inactive", true);
+            debtLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            healthLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            alcoholLabel
+                .classed("active", false)
+                .classed("inactive", true);
         }
         else if (chosenXAxis === 'happiness_score_2015') {
             gdpLabel
@@ -274,8 +316,17 @@ d3.csv("data/country_data.csv").then(function(countryData, err) {
             hdiLabel
                 .classed("active", false)
                 .classed("inactive", true);
+            debtLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            healthLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            alcoholLabel
+                .classed("active", false)
+                .classed("inactive", true);
         }
-        else {
+        else if (chosenXAxis === 'human_development_index'){
             gdpLabel
                 .classed("active", false)
                 .classed("inactive", true);
@@ -285,6 +336,75 @@ d3.csv("data/country_data.csv").then(function(countryData, err) {
             hdiLabel
                 .classed("active", true)
                 .classed("inactive", false);
+            debtLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            healthLabel
+                .classed("active", false)
+                .classed("inactive", true);
+            alcoholLabel
+                .classed("active", false)
+                .classed("inactive", true);
+        }
+        else if (chosenXAxis === 'private_debt_2015'){
+          gdpLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          happinessLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          hdiLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          debtLabel
+              .classed("active", true)
+              .classed("inactive", false);
+          healthLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          alcoholLabel
+              .classed("active", false)
+              .classed("inactive", true);
+        }
+        else if (chosenXAxis === 'health_spending_percapita_2015'){
+          gdpLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          happinessLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          hdiLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          debtLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          healthLabel
+              .classed("active", true)
+              .classed("inactive", false);
+          alcoholLabel
+              .classed("active", false)
+              .classed("inactive", true);
+        }
+        else if (chosenXAxis === 'alcohol_consumption_percapita'){
+          gdpLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          happinessLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          hdiLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          debtLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          healthLabel
+              .classed("active", false)
+              .classed("inactive", true);
+          alcoholLabel
+              .classed("active", true)
+              .classed("inactive", false);
         }
       }
     });

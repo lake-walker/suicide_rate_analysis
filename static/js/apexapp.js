@@ -2,7 +2,7 @@
 
 var chart = c3.generate({
     data: {
-        url: 'data/region_data.csv',
+        url: 'data/new_region_data.csv',
         type: 'bar',
         labels: true,
         x: 'region',

@@ -18,7 +18,7 @@ var myMap = L.map("map", {
 
 // bring in the geojson data as well as the csv country data for mapping
 d3.json('data/countries.geojson').then(function (data) {
-    d3.csv('data/country_data.csv').then(function (csv) {
+    d3.csv('data/new_country_data.csv').then(function (csv) {
       var world = data.features;
       console.log(world[39].properties.ADMIN);
       console.log(csv);
@@ -28,7 +28,10 @@ d3.json('data/countries.geojson').then(function (data) {
             e.properties.sui_per_100k_2015 = +d.sui_per_100k_2015,
             e.properties.human_development_index = +d.human_development_index,
             e.properties.gdp_percapita_2015 = +d.gdp_percapita_2015,
-            e.properties.happiness_score_2015 = +d.happiness_score_2015
+            e.properties.happiness_score_2015 = +d.happiness_score_2015,
+            e.properties.alcohol_consumption_percapita = +d.alcohol_consumption_percapita,
+            e.properties.health_spending_percapita_2015 = +d.health_spending_percapita_2015,
+            e.properties.private_debt_2015 = +d.private_debt_2015
           }
           // else {
           //   e.properties.sui_per_100k_2015 = 'N/A'
@@ -96,6 +99,45 @@ d3.json('data/countries.geojson').then(function (data) {
         for (var i = 0; i < grades.length; i++) {
           div.innerHTML +=
             '<i style="background:' + getHDIColor(grades[i]) + '"></i>' + (grades[i] ?  grades[i] + '<br>' : '+')
+          
+        }
+        return div;
+      };
+      var alcoholLegend = L.control({position: 'bottomright'});
+      alcoholLegend.onAdd = function (myMap) {
+        var div = L.DomUtil.create('div','info legend'),
+          grades = [0,3,6,9,12,15],
+          labels = [];
+          
+        for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+            '<i style="background:' + getALCColor(grades[i]) + '"></i>' + (grades[i] ?  grades[i] + '<br>' : '+')
+          
+        }
+        return div;
+      };
+      var debtLegend = L.control({position: 'bottomright'});
+      debtLegend.onAdd = function (myMap) {
+        var div = L.DomUtil.create('div','info legend'),
+          grades = [0,25,50,75,100,150],
+          labels = [];
+          
+        for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+            '<i style="background:' + getDEBTColor(grades[i]) + '"></i>' + (grades[i] ?  grades[i] + '<br>' : '+')
+          
+        }
+        return div;
+      };
+      var healthLegend = L.control({position: 'bottomright'});
+      healthLegend.onAdd = function (myMap) {
+        var div = L.DomUtil.create('div','info legend'),
+          grades = [0,75,150,500,1000,1500],
+          labels = [];
+          
+        for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+            '<i style="background:' + getHEALTHColor(grades[i]) + '"></i>' + (grades[i] ?  grades[i] + '<br>' : '+')
           
         }
         return div;
@@ -228,11 +270,109 @@ d3.json('data/countries.geojson').then(function (data) {
           layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + "</h2>");
         }
       })
+
+      var debt_map = L.geoJson(data, {
+        style: function(feature) {
+          return {
+            color: 'white',
+            fillColor: getDEBTColor(feature.properties.private_debt_2015),
+            fillOpacity: 0.8,
+            weight: 1.5
+          };
+        },
+        onEachFeature: function(feature, layer) {
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            },
+            click: function(event) {
+              myMap.fitBounds(event.target.getBounds());
+            }
+          });
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+        }
+      })
+
+      var health_map = L.geoJson(data, {
+        style: function(feature) {
+          return {
+            color: 'white',
+            fillColor: getHEALTHColor(feature.properties.health_spending_percapita_2015),
+            fillOpacity: 0.8,
+            weight: 1.5
+          };
+        },
+        onEachFeature: function(feature, layer) {
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            },
+            click: function(event) {
+              myMap.fitBounds(event.target.getBounds());
+            }
+          });
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+        }
+      })
+
+      var alcohol_map = L.geoJson(data, {
+        style: function(feature) {
+          return {
+            color: 'white',
+            fillColor: getALCColor(feature.properties.alcohol_consumption_percapita),
+            fillOpacity: 0.8,
+            weight: 1.5
+          };
+        },
+        onEachFeature: function(feature, layer) {
+          layer.on({
+            mouseover: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 1
+              });
+            },
+            mouseout: function(event) {
+              layer = event.target;
+              layer.setStyle({
+                fillOpacity: 0.8
+              });
+            },
+            click: function(event) {
+              myMap.fitBounds(event.target.getBounds());
+            }
+          });
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+        }
+      })
+
+
       var baseMaps = {
         'Suicides per 100k': sui_map,
         'Happiness Score': happy_map,
         'GDP per Capita': gdp_map,
-        'Human Development Index': hdi_map
+        'Human Development Index': hdi_map,
+        'Private Debt': debt_map,
+        'Health Spending': health_map,
+        'Alcohol Consumption': alcohol_map
       };
 
       var overlayMaps = {};
@@ -266,6 +406,21 @@ d3.json('data/countries.geojson').then(function (data) {
           myMap.removeControl(currentLegend );
           currentLegend = hdiLegend;
           hdiLegend.addTo(myMap);
+        }
+        else if (eventLayer.name === 'Private Debt') {
+          myMap.removeControl(currentLegend );
+          currentLegend = debtLegend;
+          debtLegend.addTo(myMap);
+        }
+        else if (eventLayer.name === 'Health Spending') {
+          myMap.removeControl(currentLegend );
+          currentLegend = healthLegend;
+          healthLegend.addTo(myMap);
+        }
+        else if (eventLayer.name === 'Alcohol Consumption') {
+          myMap.removeControl(currentLegend );
+          currentLegend = alcoholLegend;
+          alcoholLegend.addTo(myMap);
         }
         
       });
@@ -321,6 +476,41 @@ function getHDIColor(d) {
         d > 0.3 ? '#97D999' :
         'black';
 };
+
+function getHEALTHColor(d) {
+  // console.log(d);
+  return d > 1500 ? '#102B57' :
+        d > 1000 ? '#185472' :
+        d > 500 ? '#20878C' :
+        d > 150 ? '#29A588' :
+        d > 75 ? '#5FC085' :
+        d > 0 ? '#97D999' :
+        'black';
+};
+0,75,150,500,1000,1500
+function getDEBTColor(d) {
+  // console.log(d);
+  return d > 150 ? '#102B57' :
+        d > 100 ? '#185472' :
+        d > 75 ? '#20878C' :
+        d > 50 ? '#29A588' :
+        d > 25 ? '#5FC085' :
+        d > 0 ? '#97D999' :
+        'black';
+};
+
+function getALCColor(d) {
+  // console.log(d);
+  return d > 15 ? '#102B57' :
+        d > 12 ? '#185472' :
+        d > 9 ? '#20878C' :
+        d > 6 ? '#29A588' :
+        d > 3 ? '#5FC085' :
+        d > 0 ? '#97D999' :
+        'black';
+};
+
+
 
 console.log(getHDIColor(0.55));
 
