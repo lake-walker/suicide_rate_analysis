@@ -95,6 +95,16 @@ html {
   opacity: 0.7;
 }
 
+.chart {
+  height: 100%;
+  width: 100%;
+}
+
+#chart {
+  height: 100%;
+  width: 100%;
+}
+
 /* Sortable tables */
 table.sortable thead {
   background-color:#eee;

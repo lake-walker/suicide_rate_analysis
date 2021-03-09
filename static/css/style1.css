@@ -8,7 +8,7 @@
     left: 300px;
     z-index: -1;
     display: block;
-    width: 400px;
+    /* width: 400px; */
     height: 300px;
     content: " ";
     background-image: url("maxresdefault.jpg");

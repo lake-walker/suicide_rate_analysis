@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/d3Style.css">
+    <link href="static/css/c3.css" rel="stylesheet">
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
@@ -54,14 +55,14 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="data">
-    <h1 class="w3-jumbo"><b>Data</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>Dataset used for analysis.</b></h1>
+    <h1 class="w3-jumbo"><b>Global Suicide Rate Analysis</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Dataset.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
   
   <!-- Datatable -->
   <div class="w3-row-padding">
-    <div class="row">
+    <div  class="row" style='height:750px;overflow:auto;'>
         <div class="col-md-12">
             <table class="sortable">
                 <thead>
@@ -101,8 +102,9 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Bubble Chart.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Suicide Rates vs. Features</p>
-    <div class="chart"></div>
-    
+    <div class="w3-row-padding">
+        <div class="chart"></div>
+    </div>
 
   <!-- Bar Chart -->
   <div class="w3-container" id="bar" style="margin-top:75px">
@@ -166,7 +168,7 @@ function onClick(element) {
 <script src="static/js/table.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 <script type="text/javascript" src="static/js/app1.js"></script>
-<script src="c3.js"></script>
+<script src="static/js/c3.js"></script>
 <script type="text/javascript" src="static/js/apexapp.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
