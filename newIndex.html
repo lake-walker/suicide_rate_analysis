@@ -35,9 +35,10 @@ body {font-size:16px;}
     <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduction</a> 
     <a href="#bubble" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bubble Chart</a> 
     <a href="#bar" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bar Chart</a>
-    <a href="#conclusion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conclusion</a>
     <a href="#Map" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Map</a>
     <a href="#model" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Model</a>
+    <a href="#conclusion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conclusion</a>
+    
   </div>
 </nav>
 
@@ -56,6 +57,8 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="data">
     <h1 class="w3-jumbo"><b>Global Suicide Rate Analysis</b></h1>
+    <p>800,000 people die from suicide every year. That accounts for about 1.4% of total global deaths annually. The trend is heading downward in much of the developed world. In some select countries suicide is taboo and even illegal which seems a bit ridiculous. Those nations that have punishments for attempted suicides tend to be in Asia and Africa. While some do still exist in other parts of the world. Because of these negative views on suicide and attempted suicide the rates tend to be underreported as cause of death is covered up or never reported. </p>
+    <p> What are the indicators of suicide rates globally?</p>
     <h1 class="w3-xxxlarge w3-text-red"><b>Dataset.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
@@ -114,6 +117,18 @@ body {font-size:16px;}
   </div>
 
   <div id="chart"></div>
+
+    <!-- Map -->
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="Map">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Map.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Map -->
+  <div class="w3-row-padding">
+    <div id = 'map'></div>
+  </div>
   
   <!-- Contact -->
   <div class="w3-container" id="conclusion" style="margin-top:75px">
@@ -125,17 +140,7 @@ body {font-size:16px;}
     <p>If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.</p>
   </div>
 
-  <!-- Map -->
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="Map">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Map.</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-  </div>
-  
-  <!-- Map -->
-  <div class="w3-row-padding">
-    <div id = 'map'></div>
-  </div>
+
 
 <!-- End page content -->
 </div>
