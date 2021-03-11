@@ -92,7 +92,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
         .attr("class", "tooltip")
         .offset([2, 80])
         .html(function(d) {
-        return (`${d.country}<br>${label} ${d[chosenXAxis]}<br>Suicides per 100k:  ${d.sui_per_100k_2015}<br>Happiness Rank: ${d.happiness_rank_2015}<br>HDI Rank: ${d.hdi_rank}`);
+        return (`${d.country}<br>${label} ${d[chosenXAxis]}<br>Suicides per 100k:  ${d.sui_per_100k_2015}<br>Happiness Rank: ${d.happiness_rank_2015}<br>HDI Rank: ${d.hdi_rank}<br>Health Spending: ${d.health_spending_percapita_2015}<br>Private Debt: ${d.private_debt_2015}<br>Alcohol Consumption: ${d.alcohol_consumption_percapita}`);
         });
     // var table = d3.select("tbody")
     //     .selectAll("tr")

@@ -106,7 +106,7 @@ d3.json('data/countries.geojson').then(function (data) {
       var alcoholLegend = L.control({position: 'bottomright'});
       alcoholLegend.onAdd = function (myMap) {
         var div = L.DomUtil.create('div','info legend'),
-          grades = [0,3,6,9,12,15],
+          grades = [0,1,3,6,9,12,15],
           labels = [];
           
         for (var i = 0; i < grades.length; i++) {
@@ -119,7 +119,7 @@ d3.json('data/countries.geojson').then(function (data) {
       var debtLegend = L.control({position: 'bottomright'});
       debtLegend.onAdd = function (myMap) {
         var div = L.DomUtil.create('div','info legend'),
-          grades = [0,25,50,75,100,150],
+          grades = [3,25,50,75,100,150],
           labels = [];
           
         for (var i = 0; i < grades.length; i++) {
@@ -132,7 +132,7 @@ d3.json('data/countries.geojson').then(function (data) {
       var healthLegend = L.control({position: 'bottomright'});
       healthLegend.onAdd = function (myMap) {
         var div = L.DomUtil.create('div','info legend'),
-          grades = [0,75,150,500,1000,1500],
+          grades = [15,75,150,500,1000,1500],
           labels = [];
           
         for (var i = 0; i < grades.length; i++) {
@@ -173,7 +173,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alocohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -204,7 +204,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alocohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
         
       });
@@ -236,7 +236,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alocohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -267,7 +267,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alocohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -298,7 +298,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -329,7 +329,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -360,7 +360,7 @@ d3.json('data/countries.geojson').then(function (data) {
               myMap.fitBounds(event.target.getBounds());
             }
           });
-          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k:' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI:' + feature.properties.human_development_index + '<br>' + 'GDP per Capita:' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score:' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt (% of GDP):' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending per Capita:' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption (per 1k):' + feature.properties.alcohol_consumption_percapita + "</h2>");
+          layer.bindPopup("<h1>" + feature.properties.ADMIN + "</h1> <hr> <h2>" + 'Suicides per 100k: ' + feature.properties.sui_per_100k_2015 + '<br>' + 'HDI: ' + feature.properties.human_development_index + '<br>' + 'GDP per Capita: ' + feature.properties.gdp_percapita_2015 + '<br>' + 'Happiness Score: ' + feature.properties.happiness_score_2015 + '<br>' + 'Private Debt: ' + feature.properties.private_debt_2015 + '<br>' + 'Health Spending: ' + feature.properties.health_spending_percapita_2015 + '<br>' + 'Alcohol Consumption: ' + feature.properties.alcohol_consumption_percapita + "</h2>");
         }
       })
 
@@ -479,34 +479,35 @@ function getHDIColor(d) {
 
 function getHEALTHColor(d) {
   // console.log(d);
-  return d > 1500 ? '#102B57' :
-        d > 1000 ? '#185472' :
-        d > 500 ? '#20878C' :
-        d > 150 ? '#29A588' :
-        d > 75 ? '#5FC085' :
-        d > 0 ? '#97D999' :
+  return d > 1500 ? '#135780' :
+        d > 1000 ? '#1D9CAA' :
+        d > 500 ? '#28D3B6' :
+        d > 150 ? '#34F9A0' :
+        d > 75 ? '#81FF7F' :
+        d > 15 ? '#EDFFD3' :
         'black';
 };
 0,75,150,500,1000,1500
 function getDEBTColor(d) {
   // console.log(d);
-  return d > 150 ? '#102B57' :
-        d > 100 ? '#185472' :
-        d > 75 ? '#20878C' :
-        d > 50 ? '#29A588' :
-        d > 25 ? '#5FC085' :
-        d > 0 ? '#97D999' :
+  return d > 150 ? '#67191F' :
+        d > 100 ? '#872447' :
+        d > 75 ? '#A62F7B' :
+        d > 50 ? '#C43CB9' :
+        d > 25 ? '#B586E0' :
+        d > 3 ? '#D5D6F6' :
         'black';
 };
 
 function getALCColor(d) {
   // console.log(d);
-  return d > 15 ? '#102B57' :
-        d > 12 ? '#185472' :
-        d > 9 ? '#20878C' :
-        d > 6 ? '#29A588' :
-        d > 3 ? '#5FC085' :
-        d > 0 ? '#97D999' :
+  return d > 15 ? '#7E0F80' :
+        d > 12 ? '#7B17AA' :
+        d > 9 ? '#6521D5' :
+        d > 6 ? '#3F2CFC' :
+        d > 3 ? '#5F8DFF' :
+        d > 1 ? '#96DEFF' :
+        d < 1 ? '#D1FFFF' :
         'black';
 };
 

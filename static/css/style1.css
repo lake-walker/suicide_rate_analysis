@@ -17,11 +17,34 @@
     background-size: cover;
     opacity: 0.3;
   }
+
+  .leaflet-popup-content,
+  h2{
+    font: 6px sans-serif;
+    text-align: left;
+    width: 400px;
+  }
+
+  .leaflet-popup-content-wrapper{
+    font: 6px sans-serif;
+    text-align: left;
+    width: 500px;
+  }
+
+  .sorttable_numeric {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .sortable,
+  td {
+    text-align: center;
+  }
   
   .tooltip {
     position: absolute;
-    width: 135px;
-    height: 100px;
+    width: 200px;
+    height: 125px;
     padding: 2px;
     padding-top: 8px;
     font: 12px sans-serif;
