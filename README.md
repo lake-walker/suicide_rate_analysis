@@ -1,4 +1,4 @@
-# project_2
+# Final Project: Suicide Rate vs.
 
 Suicide Rates vs. Happiness and other indexes
 
