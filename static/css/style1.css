@@ -40,6 +40,17 @@
   td {
     text-align: center;
   }
+
+  .table,
+  thead,
+  tr,
+  th {
+    text-align: center;
+  }
+
+  .comparison {
+    width: 100%;
+  }
   
   .tooltip {
     position: absolute;

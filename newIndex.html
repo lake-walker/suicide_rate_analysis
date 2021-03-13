@@ -72,7 +72,7 @@ body {font-size:16px;}
                 <thead>
                     <tr><th>Country </th> <th class='sorttable_numeric'>GDP per Capita</th> <th class='sorttable_numeric'>Suicides per 100k</th> <th class='sorttable_numeric'>Happiness Index Score</th> <th class='sorttable_numeric'>Human Development Index</th> <th class='sorttable_numeric'>Happiness Rank</th> <th class='sorttable_numeric'>HDI Rank</th> <th class='sorttable_numeric'>Private Debt (% of GDP)</th> <th class='sorttable_numeric'>Health Spending per Capita</th> <th class='sorttable_numeric'>Alcohol Consumption per Capita</th></tr>
                 </thead>
-                <tbody></tbody>
+                <tbody class='dataset'></tbody>
             </table>
         </div>
     </div>
@@ -131,12 +131,39 @@ body {font-size:16px;}
     <div id = 'map'></div>
   </div>
 
-  <!-- Packages / Pricing Tables -->
+  <!-- Model -->
   <div class="w3-container" id="model" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Models.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>A linear regression model as well as a deep neural network model were used to predict suicide rates based off the features discussed before.</p>
   </div>
+
+
+  <!-- Model Table -->
+  <div class="w3-row-padding">
+    <div  class="row" style='height:350px;overflow:auto;'>
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr><th>Model </th> <th>Mean Absolute Error</th> <th>Mean Squared Error</th>
+                </thead>
+                <tbody class='predictions'></tbody>
+            </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- Model Table -->
+  <!-- <div class="w3-row-padding">
+    <div  class="row" style='height:1200px;overflow:auto;'>
+        <div class="col-md-12">
+          <p><strong>Comparison between all of the features</strong></p>
+          <img class='comparison' src='visuals/feature_v_feature.jpg' alt='feature v feature'>
+        </div>
+    </div>
+  </div> -->
+
+  <!-- Model comparison -->
 
   <div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
