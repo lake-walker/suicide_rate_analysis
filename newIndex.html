@@ -38,6 +38,7 @@ body {font-size:16px;}
     <a href="#bar" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bar Chart</a>
     <a href="#Map" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Map</a>
     <a href="#model" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Model</a>
+    <a href="#findings" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Findings</a>
     <a href="#conclusion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Conclusion</a>
     
   </div>
@@ -190,7 +191,16 @@ body {font-size:16px;}
       </ul>
     </div>
     <br>
-    <p>FINDINGS</p>
+  </div>
+
+  <!-- Findings -->
+  <div class="w3-container" id="findings" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Findings.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><strong>MSE vs. MAE </strong></p>
+    <p>Mean Squared Error: With the nature of the data and using real world data points I think that the MSE is as good as it gets. The line of best fit describes the data best. MSE is going to be influenced by the larger outlier and create a larger error coefficient. While I believe it is the best it can be I don't think that MSE is the best performance indicator for this model. I think mean absolute value is a better indicator of performance.</p>
+    <p>Mean Absolute Error: Unlike the MSE, MAE is based on the absolute value of the error and not the square. This means the error residual treats both the large and small errors equally. Because there are outliers within the dataset it is important to not over emphasize the errors. This error coefficient is a better fit for real world data where we are likely to experience some large outliers.</p>
+    <p>If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.</p>
   </div>
   
   <!-- Conclusion -->
@@ -198,9 +208,9 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge w3-text-red"><b>Conclusion.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p><strong>Conclusion: Suicide Rates vs. X </strong></p>
-    <p>In my findings from this project I came to the conclusion that the global Happiness Index is not a valid indicator of what a certain countries suicide rates will be. Looking at GDP per Capita, which is considered the go to measurement for a countries development and individual liberties, also does not show any relationship with suicide data. The Human Development Index offered the most promising correlation to suicides per 100k, however it failed to generate a significant relationship between the two variables.</p>
-    <p>Developed nations are no better at lowering their suicide rates as developing nations are. Economic and development status are not indicators of lower suicide rates globally. A nation cannot expect to see a decrease in their suicide rate by simply following the established development cycle like other before it. Those same nations that have lead the world in economic prosperity are no better off than those that are lagging behind.</p>
-    <p>If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.</p>
+    <p>In my findings from this project I came to the conclusion that using the six feature listed previously we can somewhat accurately predict the suicide rates of a country. Because this is a real world dataset I have allowed for my models to have a higher error coefficient than what would be used for a controlled study. With a mean absolute error around 2 I feel confident in saying the model can predict with a degree of accuracy what a countries suicide rate per 100k population could be. </p>
+    <p>The additional features added (debt, health spending, and alcohol consumption) have made the model more accurate and partnered with the original three features the model predicts with a degree of accuracy.</p>
+    <p>If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. It is difficult to find complete datasets for most of these indicators. Most under-developed and developing nations don't report the kind of data that would be most beneficial for this study. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.</p>
   </div>
 
 
