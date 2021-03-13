@@ -25,6 +25,7 @@ Variables:
 •	If there is a correlation between any of these variables and suicides per 100k than that could be used to help guide policy to limit the number of suicides in developed and developing nations.
 
 Visualizations:
+
 •	Bubble chart
   o	Grouping of regions
   o	The outliers and unexpected results
@@ -45,6 +46,7 @@ Model
 
 
 Findings
+
 MSE vs. MAE
 
 Mean Squared Error: With the nature of the data and using real world data points I think that the MSE is as good as it gets. The line of best fit describes the data best. MSE is going to be influenced by the larger outlier and create a larger error coefficient. While I believe it is the best it can be I don't think that MSE is the best performance indicator for this model. I think mean absolute value is a better indicator of performance.
@@ -54,9 +56,13 @@ Mean Absolute Error: Unlike the MSE, MAE is based on the absolute value of the e
 If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.
 
 Conclusion
+
 •	In conclusion I cannot accept the original hypothesis for this project. There is not correlation between these variables and suicide rates. More in depth and niche data and research would provide a better understanding of how nations can work towards lowering their death by suicide.
+
 •	In my findings from this project I came to the conclusion that the global Happiness Index is not a valid indicator of what a certain countries suicide rates will be. Looking at GDP per Capita, which is considered the go to measurement for a countries development and individual liberties, also does not show any relationship with suicide data. The Human Development Index offered the most promising correlation to suicides per 100k, however it failed to generate a significant relationship between the two variables.
+
 •	Developed nations are no better at lowering their suicide rates as developing nations are. Economic and development status are not indicators of lower suicide rates globally. A nation cannot expect to see a decrease in their suicide rate by simply following the established development cycle like other before it. Those same nations that have lead the world in economic prosperity are no better off than those that are lagging behind.
+
 •	If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.
 
 
