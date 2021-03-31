@@ -14,14 +14,23 @@ Overview:
 Variables:
 
 •	Suicides: For this analysis we will be looking at the number of suicides per 100,000 people in the population.
+
 •	HDI: HDI attempts to create an index that looks beyond GDP for determining a countries capabilities. The Human Development Index is a summary of key dimensions in human development. Those dimensions include: life expectancy, education (number of years of education), and standard of living (GNI per Capita). HDI is measure between 0 and 1 with 1 being the highest and most developed and 0 being the least developed nations.
+
 •	Happiness Index: The report is primarily based on individual respondent ratings. This provides some difficulty in gathering data and reports as this index is done entirely by survey. Rated out of 10 with 10 being the happiest life and 0 being the saddest.
+
 •	GDP per capita: GDP or Gross Domestic Product is a measure of a country's economic output. It measures the added value from the production of goods and services in a given country over a certain period of time, typically a year. Per capita means it accounts for each individual in a population.
+
 •	Alcohol consumption: Defined as the annual sales of pure alcohol in litres per person aged 15 years and older. This indicator is meased in litres per capita.
+
 •	Health spending: Measures the final consumption of health care goods and services including personal health care and collective ervices. This indicator is measured as a share of GDP, as a share of total health spending and in USD per capita.
+
 •	Private debt: Measured as a percentage of GDP and taken from the International Monetary Funds website. Described as the total stock of loans and debt securities issued by household and nonfinancial corporations as a share of GDP.
+
 •	I chose these independent variables because GDP is the typical index used for determining a nations worth or capabilities. During economic and policy discussions GDP per capita is used heavily to influence political and economic decisions.
+
 •	The Happiness index and HDI both take a different look at the capabilities of the individuals that make up a country/economy. They are more accurate representations of what day to day life is like in each country. 
+
 •	If there is a correlation between any of these variables and suicides per 100k than that could be used to help guide policy to limit the number of suicides in developed and developing nations.
 
 Visualizations:
