@@ -1,4 +1,4 @@
-# Final Project: Suicide Rate vs.
+Suicide Rate Analysis
 
 Suicide Rates vs. Happiness and other indexes
 
