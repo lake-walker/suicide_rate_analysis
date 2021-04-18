@@ -36,7 +36,7 @@ Variables:
 Visualizations:
 
 •	Bubble chart
-![Alt text](visuals/bubble_chart.png?raw=true "Bubble Chart")
+![Screenshot](visuals/bubble_chart.png?raw=true "Bubble Chart")
   o	Grouping of regions
   o	The outliers and unexpected results
   o	No firm relationship appears for any of the variables
