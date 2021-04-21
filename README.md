@@ -24,10 +24,13 @@ Suicide Rates vs. Happiness and other indexes
 
 *Visualizations:*
 -	Bubble chart
-![Screenshot](visuals/bubble_chart.png?raw=true "Bubble Chart")
+
+![Screenshot](visuals/bubble_chart.png "Bubble Chart")
+  
   *	Grouping of regions
   *	The outliers and unexpected results
   *	No firm relationship appears for any of the variables
+
 -	Bar Chart
   *	Continues to confirm the regional differences and generalizations we can make about those regions
 -	Map
