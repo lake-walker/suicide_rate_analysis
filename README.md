@@ -23,7 +23,7 @@ Suicide Rates vs. Happiness and other indexes
 -	If there is a correlation between any of these variables and suicides per 100k than that could be used to help guide policy to limit the number of suicides in developed and developing nations.
 
 *Visualizations:*
--	Bubble chart
+Bubble chart
 
 <img width="907" alt="bubble_graph" src="https://user-images.githubusercontent.com/47986124/115576506-cfc15680-a280-11eb-8690-bce3b7a5d7ea.png">
 
@@ -32,9 +32,17 @@ Suicide Rates vs. Happiness and other indexes
   *	The outliers and unexpected results
   *	No firm relationship appears for any of the variables
 
--	Bar Chart
+Bar Chart
+
+<img width="1656" alt="bar_graph" src="https://user-images.githubusercontent.com/47986124/115576762-0a2af380-a281-11eb-9b5a-c26b97519fcd.png">
+
+
   *	Continues to confirm the regional differences and generalizations we can make about those regions
--	Map
+Map
+
+<img width="720" alt="map" src="https://user-images.githubusercontent.com/47986124/115576784-0f883e00-a281-11eb-8713-e76c34b8b72f.png">
+
+
   *	Visualization of how the different indexes layout accross the globe. More regional similarities are shown. 
  
 *Model*
@@ -46,6 +54,9 @@ Suicide Rates vs. Happiness and other indexes
   *	Linear regression seems to be working well. The model get slightly stuck in the steps but fits the curve well.
   *	DNN regression fits less well. The model gets stuck and overfits the training data.
 
+<img width="736" alt="models" src="https://user-images.githubusercontent.com/47986124/115576822-1747e280-a281-11eb-95b8-ae80cefe5989.png">
+
+
 
 *Findings*
 
@@ -56,6 +67,12 @@ Mean Squared Error: With the nature of the data and using real world data points
 Mean Absolute Error: Unlike the MSE, MAE is based on the absolute value of the error and not the square. This means the error residual treats both the large and small errors equally. Because there are outliers within the dataset it is important to not over emphasize the errors. This error coefficient is a better fit for real world data where we are likely to experience some large outliers.
 
 If I were to repeat this study again I would drill down into the more detailed data and find specific indicators that drive down the suicide rates. Things like access to healthcare, levels of education, religion, debt to income ratio, and political stability. I think these variables take a deeper dive into how a country treats each individual citizen and the desire to better everyones life within their population. It would also be noteworthy to look at the situations surrounding suicides if that data is accessable. The percentage that happen within a prison system, and how many people commited suicide with undiagnosed and medicated mental health issues. It might be far fetched to think that this kind of data is easily accessible, but I think it's valuable to look at how countries treat their citizens.
+
+There does appear to be a relationship between aclohol consumption and suicide rates. The figure below shows a line of best fit showing and increase in alcohol consumption leads to increased suicide rates within countries. This tracks as large amounts of alcohol consumption and alcoholism lead to poor mental health and an inability to deal with stressors in life. 
+
+![dnn_alcohol_predictions](https://user-images.githubusercontent.com/47986124/115576893-2af34900-a281-11eb-8e56-d22e67ab18f3.jpg)
+
+
 
 *Conclusion*
 
